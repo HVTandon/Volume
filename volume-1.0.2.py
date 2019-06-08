@@ -149,10 +149,12 @@ with rio.open('Romont3D_dsm.tif') as src:
                 #print(x, y, inside1)        
             
 fill=fill*pix_length*pix_width
+fill_err=fill*1.5*pix_length
 cut=cut*pix_length*pix_width
+cut_err=cut*1.5*pix_length
 print(reference)
 print(np.amax(ref_list))
 print(i,"--------------", j)
-print(fill,"-----------------------",cut)
+print(fill,"-----------------------",cut,"---------",fill_err,"-----------",cut_err)
 end=time.time()
 print(end-start)
